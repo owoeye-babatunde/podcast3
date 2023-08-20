@@ -14,7 +14,7 @@ def main():
     # Dropdown box
     st.sidebar.subheader("Available Podcasts Feeds")
     selected_podcast = st.sidebar.selectbox("Select Podcast", options=available_podcast_info.keys())
-
+    
     if selected_podcast:
 
         podcast_info = available_podcast_info[selected_podcast]
@@ -43,10 +43,11 @@ def main():
         with col3:
             st.subheader("Podcast Guest")
             st.write(podcast_info['podcast_guest'])
-
+        
         with col4:
+            #print(podcast_info.keys()) #remove later
             st.subheader("Podcast Guest Details")
-            st.write(podcast_info["podcast_guest"]['summary'])
+            st.write(podcast_info["podcast_summary"])
 
         # Display the five key moments
         st.subheader("Key Moments")
